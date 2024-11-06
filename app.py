@@ -1,5 +1,4 @@
-from flask import Flask, make_response, jsonify, request, render_template
-from weather import get_weather as gw
+from flask import Flask, make_response, jsonify, request, render_template # type: ignore
 import time
 
 app = Flask(__name__)
