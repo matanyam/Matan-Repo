@@ -4,7 +4,7 @@ const status = document.getElementById('status');
 Form.addEventListener('submit', function(event) {
     console.log('Form is submitted!');
     event.preventDefault();
-    const Temp = document.getElementById('Temperature').value;
+    const tmp = document.getElementById('Temperature').value;
     console.log(`c: ${tmp}`);
     ConvertTemp(tmp);
 });
@@ -16,6 +16,6 @@ async function ConvertTemp(tmp) {
 
     console.log(data);
     console.log(data.status_code);
-    status.textContent = `Status code: ${data.status_code}`;
+    status.textContent = `Converted Temperature: ${data.Fahrenheit} °F`;
 
 }

@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request
-import requests
-from tld import is_tld
+
 
 app = Flask(__name__)
 
 
 @app.route('/convert_to_fahrenheit')
-def check_url():
+def convert_to_fahrenheit():
     c = request.args.get('Temperature')
     f = int(c) * (9/5) + 32
     return {"Fahrenheit": f}
